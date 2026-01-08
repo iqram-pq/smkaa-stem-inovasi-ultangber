@@ -20,7 +20,7 @@
 body {
     font-family: 'Inter', sans-serif;
     color: var(--dark);
-    background-color: var(--light-bg);
+    background-color: var(--white);
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -125,26 +125,9 @@ header {
     padding: 20px 0;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo-icon {
-    font-size: 2rem;
-    color: var(--primary);
-}
-
-.logo-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-dark);
-}
-
-.logo-text span {
-    color: var(--accent);
+.logo img {
+    height: 60px;
+    width: auto;
 }
 
 .nav-links {
@@ -171,141 +154,141 @@ header {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(13, 148, 136, 0.05) 100%);
+    background: url('https://via.placeholder.com/1920x800?text=Background+Pattern') center/cover no-repeat;
     padding: 100px 0;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(13, 148, 136, 0.05) 100%);
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: -50px;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: relative;
     z-index: 2;
 }
 
-.hero-text {
-    flex: 1;
-    max-width: 600px;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    color: var(--primary-dark);
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--dark);
     margin-bottom: 20px;
     line-height: 1.2;
 }
 
-.hero-text p {
+.hero-content h1 span {
+    color: var(--primary);
+    display: block;
+}
+
+.hero-content p {
     font-size: 1.2rem;
     color: var(--gray);
     margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.hero-cta {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
+.hero-content .btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
 }
 
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Pengenalan Section */
+.pengenalan {
+    background-color: var(--light-bg);
 }
 
-.game-board {
-    width: 100%;
-    max-width: 400px;
-    height: 400px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect width="400" height="400" fill="%23ffffff" stroke="%232563EB" stroke-width="2"/><rect x="20" y="20" width="360" height="360" fill="%23ffffff" stroke="%232563EB" stroke-width="1"/><rect x="40" y="40" width="320" height="320" fill="%23F8FAFC" stroke="%230D9488" stroke-width="1"/><circle cx="200" cy="200" r="150" fill="%23ffffff" stroke="%23F97316" stroke-width="1"/><text x="200" y="200" text-anchor="middle" dominant-baseline="middle" font-family="Poppins" font-size="18" fill="%232563EB">ULTANGBER</text></svg>') center/contain no-repeat;
-}
-
-/* What is ULTANGBER */
-.about-content {
+.pengenalan-content {
     display: flex;
     gap: 50px;
     align-items: center;
 }
 
-.about-text {
+.pengenalan-text {
     flex: 1;
 }
 
-.about-text h2 {
+.pengenalan-text h3 {
     color: var(--primary-dark);
     margin-bottom: 20px;
 }
 
-.about-image {
+.pengenalan-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.game-visual {
+.pengenalan-image img {
     width: 100%;
-    max-width: 350px;
-    height: 350px;
-    background: linear-gradient(135deg, #ffffff, #F0F9FF);
+    max-width: 400px;
     border-radius: var(--radius);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
 }
 
-.game-visual::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border: 2px dashed var(--primary);
-    border-radius: calc(var(--radius) - 5px);
+/* Komponen Section */
+.komponen {
+    background-color: var(--white);
 }
 
-.game-visual::after {
-    content: 'Papan Permainan';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+.komponen-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.komponen-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.komponen-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.komponen-card:hover {
+    transform: translateY(-5px);
+}
+
+.komponen-icon {
+    font-size: 3rem;
     color: var(--primary);
-    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-/* How it Works */
+.komponen-card h3 {
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+.cara-bermain {
+    margin-top: 50px;
+}
+
+.cara-bermain h3 {
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+}
+
 .steps {
     display: flex;
     flex-wrap: wrap;
@@ -320,65 +303,37 @@ header {
     width: 100%;
     max-width: 350px;
     box-shadow: var(--shadow);
-    text-align: center;
+    display: flex;
+    align-items: flex-start;
     transition: transform 0.3s ease;
 }
 
 .step-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
-.step-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto 20px;
-    color: var(--white);
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
 }
 
-.step-card h3 {
+.step-content h4 {
     color: var(--primary-dark);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
-/* Components */
-.components-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.component-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 30px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.component-card:hover {
-    transform: translateY(-5px);
-}
-
-.component-icon {
-    font-size: 3rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-}
-
-.component-card h3 {
-    color: var(--primary-dark);
-    margin-bottom: 15px;
-}
-
-/* Impact */
-.impact {
+/* Keberkesanan Section */
+.keberkesanan {
     background: linear-gradient(135deg, #F0F9FF, #E6FFFA);
 }
 
@@ -458,63 +413,8 @@ header {
     font-weight: bold;
 }
 
-/* For Teachers */
-.teachers-content {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-}
-
-.teachers-text {
-    flex: 1;
-}
-
-.teachers-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.teacher-visual {
-    width: 100%;
-    max-width: 350px;
-    height: 350px;
-    background: linear-gradient(135deg, #FEF7ED, #F0F9FF);
-    border-radius: var(--radius);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-}
-
-.teacher-visual::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    border: 2px dashed var(--accent);
-    border-radius: calc(var(--radius) - 5px);
-}
-
-.teacher-visual::after {
-    content: 'Aktiviti P&P';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    color: var(--accent);
-    font-size: 1.2rem;
-}
-
-/* Download Hub */
-.downloads {
+/* Sumber Section */
+.sumber {
     background: linear-gradient(135deg, #F0FDF4, #E6FFFB);
 }
 
@@ -548,49 +448,46 @@ header {
     margin-bottom: 15px;
 }
 
-/* About Team */
-.team-grid {
+/* Galeri Section */
+.galeri {
+    background-color: var(--light-bg);
+}
+
+.galeri-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
-.team-card {
-    background: var(--white);
+.galeri-item {
+    position: relative;
+    overflow: hidden;
     border-radius: var(--radius);
-    padding: 30px;
     box-shadow: var(--shadow);
-    text-align: center;
     transition: transform 0.3s ease;
 }
 
-.team-card:hover {
+.galeri-item:hover {
     transform: translateY(-5px);
 }
 
-.team-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 20px;
+.galeri-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeri-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
     color: var(--white);
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.team-card h3 {
-    color: var(--primary-dark);
-    margin-bottom: 10px;
-}
-
-.team-role {
-    color: var(--gray);
-    margin-bottom: 15px;
-    font-style: italic;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 /* Footer */
@@ -675,22 +572,20 @@ footer {
 
 /* Responsive */
 @media (max-width: 992px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .hero-text {
-        margin-bottom: 50px;
-    }
-    
-    .about-content,
-    .teachers-content {
+    .pengenalan-content {
         flex-direction: column;
     }
     
-    .hero-cta {
-        justify-content: center;
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .komponen-content {
+        gap: 30px;
+    }
+    
+    .cara-bermain h3 {
+        font-size: 1.5rem;
     }
 }
 
@@ -720,8 +615,12 @@ footer {
         font-size: 2rem;
     }
     
-    .hero-text h1 {
+    .hero-content h1 {
         font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
     }
 }
 
@@ -730,16 +629,15 @@ footer {
         padding: 60px 0;
     }
     
-    .hero-text h1 {
+    .hero-content h1 {
         font-size: 1.8rem;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        align-items: center;
     }
     
     .stat-card {
         width: 100%;
+    }
+    
+    .galeri-item img {
+        height: 150px;
     }
 }
