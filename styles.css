@@ -710,3 +710,10 @@ footer {
         font-size: 0.9rem;
     }
 }
+
+/* Style for inline logo */
+.inline-logo {
+    height: 1.2em; /* Adjust size as needed */
+    vertical-align: middle; /* Align with text */
+    margin: 0 2px; /* Add small margin around the logo */
+}
