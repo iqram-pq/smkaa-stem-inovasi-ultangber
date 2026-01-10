@@ -172,7 +172,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('assets/background.png') center/cover no-repeat;
+    background: url('assets/background.png') center/cover no-repeat; /* Replace with your actual background image path */
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -186,7 +186,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%); /* Optional overlay */
 }
 
 .hero-content {
@@ -204,6 +204,13 @@ header {
 .hero-content h1 span {
     color: var(--primary);
     display: block;
+}
+
+/* New class for the hero logo */
+.hero-logo {
+    height: 1.8em; /* Adjust size as needed */
+    vertical-align: middle; /* Align with text */
+    margin: 0 2px; /* Add small margin around the logo */
 }
 
 .hero-content p {
@@ -296,6 +303,11 @@ header {
     font-size: 3rem;
     color: var(--primary);
     margin-bottom: 20px;
+}
+
+/* Komponen image class for custom images */
+.komponen-image {
+    margin-bottom: 15px;
 }
 
 .komponen-card h3 {
@@ -709,11 +721,4 @@ footer {
     .contact-info p {
         font-size: 0.9rem;
     }
-}
-
-/* Style for inline logo */
-.inline-logo {
-    height: 1.2em; /* Adjust size as needed */
-    vertical-align: middle; /* Align with text */
-    margin: 0 2px; /* Add small margin around the logo */
 }
